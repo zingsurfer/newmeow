@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'beta-newmeow.herokuapp.com',
     'newmeow.herokuapp.com',
+    'localhost'
 ]
 
 
