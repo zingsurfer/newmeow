@@ -25,7 +25,10 @@ SECRET_KEY = 'gi0g&6$(e$8_m(q*=b^2g9+4=)gv1=5ko)#0m80v%-orpy=f=$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'beta-newmeow.herokuapp.com',
+    'newmeow.herokuapp.com',
+]
 
 
 # Application definition
