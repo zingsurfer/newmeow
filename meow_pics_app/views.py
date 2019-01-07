@@ -11,10 +11,10 @@ class HomePageView(TemplateView):
         return render(request, 'home.html',{'random_cat_pic':random_cat_pic})
 
 class FaveMeowPicsIndex(ListView):
-    def get(self, request):
-        model = FavoriteCatPic
-        # fave_pics = FavoriteCatPic.objects
-        # return render(request, 'fave_meow_pics/index.html')
-        template_name = 'fave_meow_pics/index.html'
-        fave_pics = ["https://cdn2.thecatapi.com/images/265.jpg", "https://cdn2.thecatapi.com/images/123.jpg"]
-        return render(request, template_name, {'fave_meow_pics':fave_pics})
+    model = FavoriteCatPic
+    template_name = 'fave_meow_pics/index.html'
+
+    def get_fave_meow_pics(self):
+        fave_meow_pics = FavoriteCatPic.objects.all()
+
+        return fave_meow_pics
