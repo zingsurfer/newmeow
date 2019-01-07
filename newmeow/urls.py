@@ -19,6 +19,6 @@ from meow_pics_app import views
 urlpatterns = [
     path('', views.HomePageView.as_view(), name='home'),
     path('fave_meow_pics',
-          views.FaveMeowPicsPageView.as_view(),
+          views.FaveMeowPicsIndex.as_view(),
           name='fave_meow_pics')
 ]
