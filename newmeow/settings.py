@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'newmeow.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get('newmeow', ''),
+        'NAME': os.environ.get('DB_NAME', 'newmeow'),
         'HOST': 'localhost',
         'PORT': '5432',
     }
