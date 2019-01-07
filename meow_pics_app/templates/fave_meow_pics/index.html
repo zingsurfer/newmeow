@@ -2,7 +2,7 @@
 {% block content %}
 <h1>Fave Meow Pics</h1>
 
-{% for fave_meow_pic in fave_meow_pics %}
+{% for fave_meow_pic in object_list %}
   <img src="{{ fave_meow_pic }}">
 {% empty %}
   <h1>Oops! There's a dog on this page! Have you added any favorite meows yet? </h1>
