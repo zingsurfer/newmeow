@@ -1,4 +1,10 @@
 {% extends "application.html" %}
 {% block content %}
+<h1>Fave Meow Pics</h1>
 
+{% for fave_meow_pic in fave_meow_pics %}
+  <img src="{{ fave_meow_pic }}">
+{% endfor %}
+<h1>Oops! There's a dog on this page! Have you added any favorite meows yet? </h1>
+<img src="https://images.unsplash.com/photo-1509559320938-387dfd4e966b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60">
 {% endblock %}
