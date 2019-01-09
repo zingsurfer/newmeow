@@ -21,12 +21,7 @@ urlpatterns = [
     path('fave_meow_pics',
           views.FaveMeowPicsIndex.as_view(),
           name='fave_meow_pics'),
-    ## ----------newer work----------
     path('new_fave_meow_pics',
           views.NewFaveMeowPics.as_view(),
           name='new_fave_meow_pics')
-    ## ----------older work----------
-    # path('new_fave_meow_pics',
-    #       views.NewFaveMeowPics,
-    #       name='new_fave_meow_pics')
 ]

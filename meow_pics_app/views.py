@@ -25,7 +25,6 @@ class FaveMeowPicsIndex(ListView):
 
         return fave_meow_pics
 
-## --------- newer work ------------------
 class NewFaveMeowPics(CreateView):
     template_name = 'favorites_form.html'
     model = FavoriteCatPic
@@ -36,19 +35,3 @@ class FavoriteForm(forms.Form):
     class Meta:
         model = FavoriteCatPic
         fields = ('url')
-
-## --------- older work ------------------
-# def NewFaveMeowPics(request):
-#     if request.method == 'POST':
-#         form = FavoriteForm(request.POST)
-#         form.save
-#         return HttpResponseRedirect('/fave_meow_pics')
-#
-# class FavoriteForm(forms.ModelForm):
-# # class FavoriteForm(forms.Form):
-#     class Meta:
-#         model = FavoriteCatPic
-#         fields = ['url']
-#         # widgets = {'url': forms.HiddenInput()}
-#         # url = forms.HiddenInput()
-#         # hidden_field = forms.CharField()
