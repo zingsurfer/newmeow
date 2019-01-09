@@ -60,3 +60,16 @@ img {
 .random_cat_pic {
   margin-top: 4%;
 }
+.btn {
+  padding: 1%;
+  margin: 3%;
+  font-size: 20px;
+  border-radius: 8px;
+  color: #364251;
+  border: 2px solid #409ba1;
+  font-family: 'Pacifico';
+}
+.btn:hover {
+  cursor: pointer;
+  background: #A3CDD0;
+}
