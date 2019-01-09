@@ -26,15 +26,29 @@ class FaveMeowPicsIndex(ListView):
 
         return fave_meow_pics
 
-class NewFaveMeowPics(CreateView):
-    template_name = 'fave_form.html'
-    model = FavoriteCatPic
-    fields = ['url']
-    success_url = reverse_lazy('fave_meow_pics')
-    def get_url(self, request):
+def NewFaveMeowPics(request, url):
+    print(request)
+    submitted = False
+    if request.method == 'POST':
+        form = FaveForm(request.POST)
+        print(form)
+        form.save
+        return HttpResponseRedirect('/fave_meow_pics?submitted=True')
+    else:
+        form = FaveForm()
+        if 'submitted' in request.GET:
+            submitted = True
+            fave_meow_pics = FavoriteCatPic.objects.all()
+
+    return render(request, 'fave_meow_pics/index.html', {'form':form, 'fave_meow_pics':fave_meow_pics, 'submitted':submitted})
+    # template_name = 'fave_form.html'
+    # model = FavoriteCatPic
+    # fields = ['url']
+    # success_url = reverse_lazy('fave_meow_pics')
+    # def get_url(self, request):
     #     # if self.request.method == 'POST':
-        url = self.request.POST.get('url')
-        return render(request, 'home.html',{'random_cat_pic':random_cat_pic})
+        # url = self.request.POST.get('url')
+        # return render(request, 'home.html',{'random_cat_pic':random_cat_pic})
 
     #     new_fave_meow_pic =FavoriteCatPic.objects.create(url=url)
     #     return HttpResponseRedirect(reverse('fave_meow_pics'))
@@ -55,6 +69,12 @@ class NewFaveMeowPics(CreateView):
     #     favorite_form = FavoriteForm(request.POST)
     #     # return redirect('/fave_meow_pics')
     #     return HttpResponseRedirect('fave_meow_pics')
+class FaveForm(ModelForm):
+    class Meta:
+        model = FavoriteCatPic
+        fields = ['url']
+        print(fields)
+        print("HOIALSKDJFOAIEDJFA")
 
 
 
