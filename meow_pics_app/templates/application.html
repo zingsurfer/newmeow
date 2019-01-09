@@ -7,9 +7,22 @@
     {% load static %}
     <link rel='stylesheet' type='text/css' href="{% static 'reset.css' %}" />
     <link rel='stylesheet' type='text/css' href="{% static 'style.css' %}" />
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Lobster+Two" rel="stylesheet">
 
   </head>
   <body>
-    {% block content %} {% endblock %}
+    {% block header %}
+    <header>
+      <h1 class='nav_logo'>NewMeow</h1>
+      <div class='nav_bar_pink'> </div>
+      <div class='nav_bar_orange'> </div>
+      <div class='nav_bar_yellow'> </div>
+      <div class='nav_bar_lt_yellow'> </div>
+    </header>
+    {% endblock %}
+    <div class='below_header'>
+      {% block content %}
+      {% endblock %}
+    </div>
   </body>
 </html>

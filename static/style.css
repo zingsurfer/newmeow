@@ -1,12 +1,11 @@
 body {
   text-align: center;
-  margin: 10%;
   background: #F5F6F7;
   color: #364251;
+  font-family: 'Pacifico';
 }
-
 h1 {
-  font-size: 32px;
+  font-size: 40px;
 }
 h2 {
   font-size: 24px;
@@ -22,8 +21,42 @@ img {
 }
 
 .meow_grid {
+  margin-top: 4%;
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-auto-rows: 250px 150px;
+}
+.below_header {
+  margin: 5% 10%;
+}
+.nav_logo {
+  background: #409ba1;
+  padding: 4% 3% 2% 3%;
+  color: #F5F6F7;
+  font-family: 'Lobster Two';
+}
+.nav_bar_lt_blue {
+  padding: .7%;
+  background: #A3CDD0;
+}
+.nav_bar_pink {
+  padding: .7%;
+  background: #EE1774;
+}
+.nav_bar_orange {
+  background: #F3635F;
+  padding: .7%;
+}
+.nav_bar_yellow {
+  background: #E7AF5D;
+  padding: .7%;
+}
+.nav_bar_lt_yellow {
+  padding: .7%;
+  background: #DFCB9B;
+  /* background: #EFE5CD; */
+}
+.random_cat_pic {
+  margin-top: 4%;
 }
