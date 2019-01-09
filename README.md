@@ -23,3 +23,12 @@ Run this app in development via `python manage.py runserver 8080`.
 
 ## Testing
 To see if tests pass, run `python manage.py test`.
+
+## Design
+This is what NewMeow currenly looks like: 
+
+<img width="658" alt="screen shot 2019-01-09 at 6 06 48 am" src="https://user-images.githubusercontent.com/36902512/50902493-3c79f500-13d8-11e9-82a6-d5ac278f30b2.png">
+
+<img width="631" alt="screen shot 2019-01-09 at 6 37 47 am" src="https://user-images.githubusercontent.com/36902512/50903822-fa52b280-13db-11e9-974b-8080b42f93f8.png">
+
+<img width="631" alt="screen shot 2019-01-09 at 6 37 11 am" src="https://user-images.githubusercontent.com/36902512/50903829-ffaffd00-13db-11e9-88c0-c20140788994.png">
