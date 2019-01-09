@@ -25,25 +25,27 @@ class FaveMeowPicsIndex(ListView):
         fave_meow_pics = FavoriteCatPic.objects.all()
 
         return fave_meow_pics
-        
+
 class NewFaveMeowPics(CreateView):
-    template_name = 'home.html'
+    template_name = 'fave_form.html'
     model = FavoriteCatPic
     fields = ['url']
     success_url = reverse_lazy('fave_meow_pics')
     def get_url(self, request):
-        # if self.request.method == 'POST':
+    #     # if self.request.method == 'POST':
         url = self.request.POST.get('url')
-        new_fave_meow_pic =FavoriteCatPic.objects.create(url=url)
-        return HttpResponseRedirect(reverse('fave_meow_pics'))
+        return render(request, 'home.html',{'random_cat_pic':random_cat_pic})
+
+    #     new_fave_meow_pic =FavoriteCatPic.objects.create(url=url)
+    #     return HttpResponseRedirect(reverse('fave_meow_pics'))
 
     # widgets = {'url': forms.HiddenInput()}
 
-    def form_valid(self, form):
-        model = form.save(commit=False)
-        model.save()
-        # return super(NewFaveMeowPics, self).form_valid(form)
-        return HttpResponseRedirect(reverse('fave_meow_pics'))
+    # def form_valid(self, form):
+    #     model = form.save(commit=False)
+    #     model.save()
+    #     # return super(NewFaveMeowPics, self).form_valid(form)
+    #     return HttpResponseRedirect(reverse('fave_meow_pics'))
     # "https://www.top13.net/wp-content/uploads/2015/10/perfectly-timed-cat-photos-funny-cover.jpg"
     # print("JUST BEFORE DEF")
     # def create_fave_meow_pics(request, url):

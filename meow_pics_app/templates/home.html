@@ -4,10 +4,10 @@
   cat-tastic!
 </h1>
 <img src="{{ random_cat_pic }}">
-<form action="{% url 'fave_meow_pics' %}" method="POST">
+<form action="{% url 'new_fave_meow_pics' %}" method="POST">
 {% csrf_token %}
-  <input type="hidden" value="https://www.top13.net/wp-content/uploads/2015/10/perfectly-timed-cat-photos-funny-cover.jpg">
-  <!-- {{ form }} -->
+  <!-- <input type="hidden" value="https://www.top13.net/wp-content/uploads/2015/10/perfectly-timed-cat-photos-funny-cover.jpg"> -->
+  {{ random_cat_pic }}
   <input type="submit" value="Favorite">
 </form>
 {% endblock %}
