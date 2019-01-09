@@ -1,9 +1,9 @@
 {% extends "application.html" %}
 {% block content %}
-<h1>
+<h2>
   cat-tastic!
-</h1>
-<img src="{{ random_cat_pic }}">
+</h2>
+<img class="random_cat_pic" src="{{ random_cat_pic }}">
 <form action="{% url 'new_fave_meow_pics' %}" method="POST">
 {% csrf_token %}
   <!-- <input type="text" value="https://www.top13.net/wp-content/uploads/2015/10/perfectly-timed-cat-photos-funny-cover.jpg"> -->
