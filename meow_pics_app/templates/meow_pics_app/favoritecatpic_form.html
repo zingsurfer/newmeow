@@ -1,0 +1,7 @@
+<form action="{% url 'new_fave_meow_pics' %}" method="POST">
+{% csrf_token %}
+  <!-- {{ favorite_form }} -->
+  <!-- <input type='hidden' name='csrfmiddlewaretoken' value='{{ csrf_token }}'> -->
+  <input type="hidden" value="{{ random_cat_pic }}">
+  <button type="submit">Favorite</button>
+</form>

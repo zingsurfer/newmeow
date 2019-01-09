@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
-
+CSRF_COOKIE_SECURE = False
 ROOT_URLCONF = 'newmeow.urls'
 
 TEMPLATES = [

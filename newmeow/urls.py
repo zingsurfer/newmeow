@@ -20,5 +20,8 @@ urlpatterns = [
     path('', views.HomePageView.as_view(), name='home'),
     path('fave_meow_pics',
           views.FaveMeowPicsIndex.as_view(),
-          name='fave_meow_pics')
+          name='fave_meow_pics'),
+    path('new_fave_meow_pics',
+          views.NewFaveMeowPics.as_view(),
+          name='new_fave_meow_pics')
 ]
