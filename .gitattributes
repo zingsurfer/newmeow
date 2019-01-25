@@ -1,1 +1,2 @@
 staticfiles linguist-vendored
+*.js linguist-language=python
