@@ -6,7 +6,7 @@ Module 4 | Autumn Martin
 NewMeow is an app that will make your day cat-tastic! NewMeow displays random cat pictures that you can favorite.
 
 ### Background
-NewMeow is a Django-Python app that retrieves random pictures from [the Cat API](https://thecatapi.com/) and lets you favorite them to a PostgreSQL database. It is deployed on Heroku [here](https://newmeow.herokuapp.com/). It also has a beta-testing site for new features [here](https://beta-newmeow.herokuapp.com/).
+NewMeow is a Django-Python app that retrieves random pictures from [the Cat API](https://thecatapi.com/) and lets you favorite them to a PostgreSQL database.
 
 ### Tech Stack
 Python 3.7.1, Django 2.1.5, Heroku, PostgreSQL, UnitTest, Selenium, HTML, CSS
@@ -25,7 +25,7 @@ Run this app in development via `python manage.py runserver 8080`.
 To see if tests pass, run `python manage.py test`.
 
 ## Design
-This is what NewMeow currenly looks like: 
+This is what NewMeow currently looks like: 
 
 <img width="658" alt="screen shot 2019-01-09 at 6 06 48 am" src="https://user-images.githubusercontent.com/36902512/50902493-3c79f500-13d8-11e9-82a6-d5ac278f30b2.png">
 
